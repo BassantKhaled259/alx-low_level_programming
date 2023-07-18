@@ -1,17 +1,20 @@
-#include<stdio.o>
 #include "main.h"
 /**
  * main - print _putchar
- * Description : prints _putchar using putchar prototype
+ * is written by mbah
  * Return: 0
  */
 
 int main(void)
-char str[] = "_putchar";
-int ch;
-
-for (char = 0 ; char < 8 ; ch++)
-_putchar(str[ch]);
+{
+_putchar('_');
+_putchar('p');
+_putchar('u');
+_putchar('t');
+_putchar('c');
+_putchar('h');
+_putchar('a');
+_putchar('r');
 _putchar('\n');
-
 return (0);
+}
