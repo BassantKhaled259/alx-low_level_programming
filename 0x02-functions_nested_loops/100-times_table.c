@@ -6,42 +6,31 @@
  */
 void print_times_table(int n)
 {
-	int i, j, k;
+int prod, mult, num;
 
-	if (n >= 0 && n <= 15)
-	{
-		for (i = 0; i <= n; i++)
-		{
-			for (j = 0; j <= n; j++)
-			{
-				k = j * i;
-				if (j == 0)
-				{
-					_putchar(k + '0');
-				} else if (k < 10 && j != 0)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(k + '0');
-				} else if (k >= 10 && k < 100)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar((k / 10) + '0');
-					_putchar((k % 10) + '0');
-				} else if (k >= 100)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar((k / 100) + '0');
-					_putchar(((k / 10) % 10) + '0');
-					_putchar((k % 10) + '0');
-				}
-			}
-			_putchar('\n');
-		}
-	}
+if (n <= 15 && n >= 0)
+{
+for (num = 0; num <= n; num++)
+{
+_putcher(48);
+for (mult = 1; mult <= n; mult++)
+{
+_putcher(',');
+_putcher(' ');
+prod = mult * num;
+if (prod <= 9)
+_putcher(' ');
+if (prod <= 99)
+_putcher(' ');
+if (prod >= 100)
+_putcher((prod / 100) + 48);
+_putcher((prod / 10) % 48);
+{
+else if (prod <= 99 && prod >= 10)
+_putcher((prod / 10) + 48);
+_putcher((prod % 10) + 48);
+}
+_putcher('\n');
+}
+}
 }
