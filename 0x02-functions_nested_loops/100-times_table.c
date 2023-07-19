@@ -12,25 +12,24 @@ if (n <= 15 && n >= 0)
 {
 for (num = 0; num <= n; num++)
 {
-_putcher("48");
+_putchar("48");
 for (mult = 1; mult <= n; mult++)
 {
-_putcher(',');
-_putcher(' ');
+_putchar(',');
+_putchar(' ');
 prod = mult * num;
 if (prod <= 9)
-_putcher(' ');
+_putchar(' ');
 if (prod <= 99)
-_putcher(' ');
+_putchar(' ');
 if (prod >= 100)
-_putcher((prod / 100) + 48);
-_putcher((prod / 10) % 48);
+_putchar((prod / 100) + 48);
+_putchar((prod / 10) % 48);
+} else if (prod <= 99 && prod >= 10)
+_putchar((prod / 10) + 48);
+_putchar((prod % 10) + 48);
 }
-else if (prod <= 99 && prod >= 10)
-_putcher((prod / 10) + 48);
-_putcher((prod % 10) + 48);
-}
-_putcher('\n');
+_putchar('\n');
 }
 }
 }
