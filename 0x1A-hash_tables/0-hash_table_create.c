@@ -15,10 +15,10 @@ hash_table_t *new = NULL;
 if (size == 0)
 return (NULL);
 new = malloc(sizeof(hash_table_t));
-if (new ==NULL)
+if (new == NULL)
 return (NULL);
 new->size = size;
-new->array = malloc(sizeof(hash_node_t *)* size);
+new->array = malloc(sizeof(hash_node_t *) * size);
 if (new->array == NULL)
 return (NULL);
 return (new);
