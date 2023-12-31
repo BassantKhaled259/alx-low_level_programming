@@ -1,18 +1,18 @@
-CC = gcc
+CC=gcc
 SRC = main.c school.c
-OBJ = $(SRC: .c = .o)
-NAME = school
-RM = rm -f
-all:
-	$(CC) $(OBJ) -o $(NAME)
+OBJ =$(SRC:.c=.o)
+NAME=school
+RM=rm
 
-# deletes all Emacs and Vim temporary files along with the executable
-clean:
-	$(RM) *~ $(NAME)
-oclean:
-	$(RM) -f $(OBJ)
-# deletes all Emacs and Vim temporary files, the executable, and the object files
-fclean: clean oclean
+all : $(OBJ)
+	$(CC) $(SRC) -o $(NAME)
 
-# forces recompilation of all source files
-re: oclean all
+clean :
+	-$(RM) -f *~ $(NAME)
+
+oclean :
+	-$(RM) -f $(OBJ)
+
+fclean : clean oclean
+
+re : oclean all
