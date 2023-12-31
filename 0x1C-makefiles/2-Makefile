@@ -1,0 +1,12 @@
+CC = gcc
+SRC = main.c school.c
+
+# OBJ: the .o files
+OBJ = $(SRC: .c = .o)
+
+# NAME: the name of the exec files
+NAME = school
+all:
+	$(CC) $(OBJ) -O $(NAME)
+clean:
+	rm -f $(OBJ)
